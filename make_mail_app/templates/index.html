@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Mail Maker</title>
+        <link rel="icon" href="../static/img/favicon.ico">
+        <meta name="description" content="Mail Maker">
+        <link rel="stylesheet" href="../static/css/styles.css">
+    </head>
+
+    <body>
+        <header>
+            <h2>Mail Maker</h2>
+            <nav>
+                <ul>
+                    <li class="current">
+                        <a href="http://127.0.0.1:8080/">
+                            HOME
+                        </a>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </header>
+
+
+        <fieldset>
+            <form action="/" method="post">
+                <textarea cols="40" rows="30" spellcheck="true"  class="honbun" name="honbun">{% if message %}{{message}}{% endif %}</textarea>
+                <legend >敬語変換</legend>
+                <ul class="Form"></ul>
+                    
+                    <br>
+                    <section>
+                    <textarea name="Input" cols="30" rows="3"></textarea>
+                        <!-- <input type="text" id="NameInput" value="名前"> -->
+                    </section>
+                        <br>
+                    <li>
+                    <button name="Button" value="と申します">といいます</button>
+                        <!-- <input name="Button" type="submit" value="といいます"> -->
+                        <!-- <input type="button" id="NameButton" value="といいます" onclick="AddStringToTextarea('NameInput','NameButton');"> -->
+                        <!-- <input type="button" id="NameButton" value="といいます" onclick="AddStringToTextarea();"> -->
+                    </li>
+
+                    <li>
+                        <button name="Button" value="致しました">しました</button>
+                    </li>
+
+                    <li>
+                        <button name="Button" value="と存じます">と思います</button>
+                    </li>
+
+                    <li>
+                        <button name="Button" value="致します">します</button>
+                    </li>
+
+                    <li>
+                        <button name="Button" value="いただければ幸いです">してくれませんか</button>
+                    </li>
+
+                    <li>
+                        <button name="Button" value="申し訳ございません">ごめん</button>
+                    </li>
+
+                    <li>
+                        <button name="Button" value="誠に申しわけございません">超ごめん</button>
+                    </li>
+
+                </ul>
+
+                
+            </form>
+        </fieldset>
+        
+        <footer>
+            <a href="https://mail.google.com/" target="_blank">
+                Go Gmail
+            </a>
+        </footer>
+    </body>
+</html>
